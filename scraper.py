@@ -56,9 +56,7 @@ def page_parser(url):
             price = "".join(item.find("div",class_="announcement-block__price").text.strip().split()[0:-1])
             if 'c' in price:
                 price = price[0:price.find('c')]
-            #     print(price)
-            # print(int(price))
-            # print("_________________________________________________________________")
+            
             row = [number_of_rooms,floor,area,address,date,price]
             write_obj.writerow(row)
         
